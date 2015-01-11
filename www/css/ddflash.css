@@ -1,0 +1,21 @@
+
+div{
+	width: 400px;
+	height: 400px;
+	font-size: 50px;
+	
+}
+.noservice{	
+	background-color: yellow;
+	color: yellow;
+}
+
+.turnon{	
+	background-color: green;
+	color:green;
+}
+
+.turnoff{	
+	background-color: red;
+	color:red;
+}
