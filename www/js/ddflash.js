@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//Function Declarations
 
 	 
-
+	//Method to display Torch options based on availability
 	function displayOption(isAvailable){
 		if (isAvailable) {
 			$("#indicator").addClass("turnon");
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 }
 	
-
+	//Method to turn off and turn on Torch
 	function lightOnOff(){
 		var className=$("#indicator").attr("class");
 		if (className=="turnon") {
@@ -32,15 +32,17 @@ $(document).ready(function(){
 			window.plugins.flashlight.switchOff();
 		}
 	} 
-	$("#indicator").tap(lightOnOff);
+	$("#indicator").tap(lightOnOff);//Toggle switch to turn on and off torch light
 
-	
+	//Method to Check Flashlight Feature
 	function flashChecker(){
 		window.plugins.flashlight.available(displayOption);
 	}
 	document.addEventListener('deviceready',function(){
 		//Device Ready
-		flashChecker();
+
+		flashChecker();//Checks for Flashlight availability
+		StatusBar.show();
 	});
 	//Loaded all DOM elements
 });
